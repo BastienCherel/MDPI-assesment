@@ -1,0 +1,13 @@
+python3.13 -m venv .venv
+source .venv/bin/activate
+uv pip install dbt-core dbt-postgres psycopg2-binary sqlfluff
+pip freeze > requirements.txt
+
+touch docker-compose.yml
+
+dbt --version
+dbt debug
+dbt seed
+dbt run
+dbt test
+dbt --version

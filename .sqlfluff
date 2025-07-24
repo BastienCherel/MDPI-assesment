@@ -1,6 +1,6 @@
 [sqlfluff]
-templater = dbt-cloud
-dialect = snowflake
+templater = python
+dialect = postgres
 runaway_limit = 10
 max_line_length = 80
 indent_unit = space
@@ -16,7 +16,7 @@ spacing_before = touch
 line_position = trailing
 
 [sqlfluff:rules:capitalisation.keywords]
-capitalisation_policy = lower
+capitalisation_policy = upper
 
 [sqlfluff:rules:aliasing.table]
 aliasing = explicit
